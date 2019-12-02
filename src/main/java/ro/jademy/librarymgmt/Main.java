@@ -111,20 +111,29 @@ public class Main {
         //library.printShelves();
 
 
-        List<String> genereList1 = new ArrayList<>();
-        genereList1.add("Novelty");
-        genereList1.add("Romance");
+        List<String> genreList1 = new ArrayList<>();
+        genreList1.add("Novelty");
+        genreList1.add("Romance");
         List<String> genreList2 = new ArrayList<>();
-        genereList1.add("SF");
+        genreList2.add("SF");
         genreList2.add("History");
-        User bob = new User("Bob", 20, 1, 23123, genereList1);
-        User ana = new User("Ana", 16, 2, 38198, genreList2);
 
-        library.borrowBook("Riding the Waves: My Story", bob);
+
+
+        User bob = new User("Bob", 20, 1, 23123, genreList1);
+        User ana = new User("Ana", 16, 2, 38198,genreList2);
+
+
+
+
+        library.borrowBook("Lolita", ana);
 //        library.printLibraryBooks();
+        System.out.println(bob.getLikedGenres());
+        System.out.println(ana.getBorrowedBookList());
+
         System.out.println("===================");
-        library.printBorrowedBooks();
-        System.out.println(bob.getBorrowedBookList());
+
+
 
     }
 }
