@@ -17,8 +17,10 @@ public class Book {
     private String genre;
     private Date borrowDate;
     private Date returnDate;
+    private String link;
 
-    public Book(String title, String author, String publisher, String isbn, int numberOfPages, String language, String genre) {
+    public Book(String title, String author, String publisher, String isbn, int numberOfPages, String language, String genre,
+                String link) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -26,6 +28,8 @@ public class Book {
         this.numberOfPages = numberOfPages;
         this.language = language;
         this.genre = genre;
+        this.link = link;
+
     }
 
     public String getTitle() {
@@ -84,7 +88,11 @@ public class Book {
         this.genre = genre;
     }
 
-    public void setBorrow(int days) {
+    public String getLink() {return link; }
+
+    public void setLink(String link) {this.link = link; }
+
+     public void setBorrow(int days) {
         borrowDate = new Date();
         returnDate = setReturnDate(days);
     }

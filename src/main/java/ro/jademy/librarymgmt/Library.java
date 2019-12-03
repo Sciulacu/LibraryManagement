@@ -89,11 +89,12 @@ public class Library {
         }
     }
 
-    public void borrowBook(String title) {
+    public void borrowBook(String title, User user) {
         Book book = searchBookByTitle(title);
         if (book != null) {
             removeBook(book.getTitle());
             borrowBooks.add(book);
+            user.getBorrowedBookList().add(book);
             // setam cartea ca fiind imprumutata
             book.setBorrow(15);
         }
