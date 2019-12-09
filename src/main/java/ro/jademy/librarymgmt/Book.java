@@ -1,7 +1,6 @@
 package ro.jademy.librarymgmt;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -39,56 +38,28 @@ public class Book {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getAuthor() {
         return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public String getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
-        this.publisher = publisher;
-    }
-
     public String getIsbn() {
         return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
     }
 
     public int getNumberOfPages() {
         return numberOfPages;
     }
 
-    public void setNumberOfPages(int numberOfPages) {
-        this.numberOfPages = numberOfPages;
-    }
-
     public String getLanguage() {
         return language;
     }
 
-    public void setLanguage(String language) {
-        this.language = language;
-    }
-
     public String getGenre() {
         return genre;
-    }
-
-    public void setGenre(String genre) {
-        this.genre = genre;
     }
 
     public int getInventory() {
@@ -115,16 +86,14 @@ public class Book {
         return cal.getTime();
     }
 
-    ArrayList<Book> books = new ArrayList<>();
-
     //    public void printDetails() {
 //        System.out.printf("| %-30.30s| %-30s| %-30s| %-20s| %-22.22s| %-8s| %-8s|%6s|\n", title, author, publisher, isbn, genre, language, link, inventory);
 //        System.out.println("+-------------------------------+-------------------------------+-------------------------------+---------------------+-----------------------+---------+---------+------+");
 //
 //    }
     public void printDetails() {
-        System.out.printf("| %-30.30s| %-30s| %-30s| %-20s| %-22.22s| %-8s| %5s|\n", title, author, publisher, isbn, genre, language, inventory);
-        System.out.println("+-------------------------------+-------------------------------+-------------------------------+---------------------+-----------------------+---------+------+");
+        System.out.printf("| %-30.30s| %-30s| %-30s| %-20s| %-20s| %-20.20s|%6s|%n", title, author, publisher, isbn, language, genre, inventory);
+        System.out.println("+-------------------------------+-------------------------------+-------------------------------+---------------------+---------------------+---------------------+------+");
 
     }
 
