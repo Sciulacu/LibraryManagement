@@ -19,16 +19,16 @@ public class Shelf {
 
     public void printBooks() {
         System.out.printf("  \033[34;1m%-151s\033[0m\n", genre);
-        System.out.println("+-------------------------------+-------------------------------+-------------------------------+---------------------+-----------------------+---------+------+");
-//        for (int i = 0; i < books.size(); i++) {
-//            Book book = books.get(i);
-//        int maxLength = 0;
-//        for (int i = 0; i < books.size(); i++) {
-//            Book book = books.get(i);
+        System.out.println("+-------------------------------+-------------------------------+-------------------------------+---------------------+---------------------+---------------------+------+");
+//
+////        for (int i = 0; i < books.size(); i++) {
+////            Book book = books.get(i);
+////        int maxLength = 0;
+////        for (int i = 0; i < books.size(); i++) {
+////            Book book = books.get(i);
         for (Book book : books) {
-                book.printDetails();
+            book.printDetails();
         }
-
     }
 
     public void printTitle() {
